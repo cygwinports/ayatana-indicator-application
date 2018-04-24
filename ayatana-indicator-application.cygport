@@ -1,0 +1,16 @@
+inherit gnome2
+
+NAME="ayatana-indicator-application"
+VERSION=0.5.2
+RELEASE=1
+CATEGORY="Libs"
+SUMMARY="Ayatana Indicator Application service"
+DESCRIPTION="Application Indicators are a GNOME implementation of the
+StatusNotifierItem Specification (SNI) that was originally submitted to
+freedesktop.org by KDE. The Ayatana Indicator project intends to become
+the new upstream for application indicators and associated projects with a
+focus on making Ayatana Indicators a desktop agnostic technology."
+HOMEPAGE="https://ayatanaindicators.github.io/"
+SRC_URI="https://github.com/AyatanaIndicators/ayatana-indicator-application/archive/${VERSION}/ayatana-indicator-application-${VERSION}.tar.gz"
+SRC_DIR="ayatana-indicator-application-${VERSION}"
+PATCH_URI="0.5.2-no-undefined.patch"

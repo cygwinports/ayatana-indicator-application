@@ -1,0 +1,18 @@
+--- origsrc/ayatana-indicator-application-0.5.2/src/Makefile.am	2017-10-06 04:34:04.000000000 -0500
++++ src/ayatana-indicator-application-0.5.2/src/Makefile.am	2018-04-23 15:46:02.028721300 -0500
+@@ -18,14 +18,11 @@ libayatana_application_la_SOURCES = \
+ libayatana_application_la_CFLAGS = $(INDICATOR_CFLAGS) \
+ 	$(COVERAGE_CFLAGS) \
+ 	-Wall \
+-	-Wl,-Bsymbolic-functions \
+-	-Wl,-z,defs \
+-	-Wl,--as-needed \
+ 	-Werror -Wno-error=deprecated-declarations \
+ 	-DG_LOG_DOMAIN=\"Ayatana-Indicator-Application\"
+ libayatana_application_la_LIBADD = $(INDICATOR_LIBS) 
+ libayatana_application_la_LDFLAGS = $(COVERAGE_LDFLAGS) \
+-	-module -avoid-version
++	-module -avoid-version -no-undefined
+ 
+ ##################################
+ # Service
